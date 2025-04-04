@@ -1,0 +1,33 @@
+{
+    "name": "vfixtechnology/bagisto-paytm",
+    "description": "Paytm payment gateway for bagisto laravel open source ecommerce platform.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vfixtechnology\\Paytm\\": "src/"
+        }
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Vfixtechnology\\Paytm\\Providers\\RazorpayServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "authors": [
+        {
+            "name": "Arun chahar",
+            "email": "info@vfixtechnology.com"
+        }
+    ],
+    "minimum-stability": "dev",
+   "require": {
+    "razorpay/razorpay": "^2.0"
+},
+"scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=public --force"
+        ]
+    }
+}
