@@ -1,28 +1,29 @@
-# Paytm Payment Gateway Integration for Bagisto by Vfix Technology
+# Payu Payment Gateway Integration for Bagisto by Vfix Technology
 
-This package provides a seamless integration of Paytm payment gateway with Bagisto applications.
+This package provides a seamless integration of Payu payment gateway with Bagisto applications.
 
 ## Installation
 
 1. Install the package via Composer:
 
 ```php
-composer require vfixtechnology/bagisto-paytm
+composer require vfixtechnology/bagisto-payu
 ```
 
-2. Register the Paytm service provider in Bootstrap/providers.php:
+2. Register the Payu service provider in Bootstrap/providers.php:
  ```php
-  Vfixtechnology\Paytm\Providers\PaytmServiceProvider::class,
+  Vfixtechnology\Payu\Providers\PayuServiceProvider::class,
  ```
 
 3. Navigate to your admin panel:
 Go to Configure/Payment Methods
-Paytm will appear at the end of the payment method list
+Payu will appear at the end of the payment method list
 
-4. Add the Paytm route to CSRF token verification exceptions in bootstrap/app.php withMiddleware(function (Middleware $middleware) :
+4. Add the Payu route to CSRF token verification exceptions in bootstrap/app.php withMiddleware(function (Middleware $middleware) :
  ```php
 $middleware->validateCsrfTokens(except: [
-    '/paytmcheck'
+    '/payu-success',
+    '/payu-failure'
 ]);
  ```
 
