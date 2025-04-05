@@ -4,7 +4,7 @@ return [
     [
         'key'    => 'sales.payment_methods.paytm',
         'name'   => 'Paytm',
-        'info' => 'Paytm extension created for Bagisto by <a href="https://www.vfixtechnology.com" target="_blank">Vfix Technology</a>.',
+       'info' => 'Paytm extension created for Bagisto by <a href="https://www.vfixtechnology.com" target="_blank" style="color: blue;">Vfix Technology</a>.',
         'sort'   => 8,
         'fields' => [
             [
